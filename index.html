@@ -3,70 +3,519 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Assam Society of Kerala</title>
-<meta name="description" content="Assam Society of Kerala — unity, support and community for Assamese people living in Kerala.">
+
+<meta name="description" content="Assam Society of Kerala - Unity, Support and Togetherness for Assamese people living in Kerala.">
+
 <style>
-:root{--green:#0b6b45;--gold:#f4b942;--ink:#17332a;--cream:#fffaf0}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,"Noto Sans",sans-serif;color:var(--ink);background:#fff}
-header{background:linear-gradient(120deg,#075b3b,#13865b);color:#fff;padding:18px 6%;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
-.brand{display:flex;align-items:center;gap:12px}.logo{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:#17332a;font-weight:900;font-size:22px}
-.brand h1{font-size:19px;margin:0}.brand small{display:block;margin-top:4px;opacity:.88}
-nav{display:flex;gap:17px;flex-wrap:wrap}nav a{color:#fff;text-decoration:none;font-size:14px;font-weight:bold}
-.hero{padding:82px 7%;text-align:center;color:white;background:linear-gradient(90deg,rgba(0,52,34,.83),rgba(0,52,34,.56)),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80') center/cover}
-.hero .eyebrow{color:#ffd77a;font-weight:bold;letter-spacing:2px}.hero h2{font-size:clamp(32px,6vw,56px);margin:15px auto;max-width:850px}.hero p{font-size:18px;line-height:1.7;max-width:720px;margin:0 auto 26px}
-.btn{display:inline-block;background:var(--gold);color:#17332a;text-decoration:none;padding:13px 22px;border-radius:30px;font-weight:bold}
-section{padding:58px 7%;scroll-margin-top:20px}.section-title{text-align:center;margin:0 0 12px;font-size:30px;color:var(--green)}.lead{text-align:center;max-width:760px;margin:0 auto 30px;line-height:1.8;color:#52635b}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}.card{padding:24px;border:1px solid #e6eee9;border-radius:16px;background:#fff;box-shadow:0 8px 24px #0b6b4510}.card .emoji{font-size:30px}.card h3{color:var(--green);margin:12px 0 8px}.card p{line-height:1.7;color:#52635b;margin:0}
-.about{background:var(--cream)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}.about-box{background:#fff;padding:26px;border-radius:16px;line-height:1.8}
-.notice{background:#eaf5ef;border-left:5px solid var(--green);padding:20px;border-radius:10px;line-height:1.8}
-.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}.gallery-placeholder{min-height:145px;border-radius:14px;background:linear-gradient(135deg,#dcefe5,#fff1cf);display:grid;place-items:center;color:#38634f;font-weight:bold;text-align:center;padding:15px}
-.contact{background:#0a5639;color:white;text-align:center}.contact .section-title{color:#fff}.contact p{line-height:1.8}.contact a{color:#ffdc85}
-footer{background:#073d2a;color:#dcece4;text-align:center;padding:22px;font-size:13px}
-@media(max-width:650px){header{justify-content:center;text-align:center}nav{justify-content:center}.about-grid{grid-template-columns:1fr}.hero{padding:65px 6%}}
+:root{
+  --green:#087443;
+  --dark:#064d32;
+  --gold:#f4b942;
+  --cream:#fffaf0;
+  --text:#17332a;
+  --white:#ffffff;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,"Noto Sans",sans-serif;
+  color:var(--text);
+  background:var(--cream);
+  line-height:1.7;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:linear-gradient(120deg,#075b3b,#13865b);
+  color:white;
+  padding:15px 6%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo{
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  background:var(--gold);
+  color:#17332a;
+  display:grid;
+  place-items:center;
+  font-size:22px;
+  font-weight:900;
+}
+
+.brand h1{
+  font-size:20px;
+  margin:0;
+}
+
+.brand small{
+  display:block;
+  font-size:13px;
+  opacity:.9;
+}
+
+nav{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:16px;
+}
+
+nav a:hover{
+  color:var(--gold);
+}
+
+.hero{
+  min-height:78vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  padding:70px 6%;
+  background:
+    linear-gradient(90deg,rgba(0,52,34,.88),rgba(0,52,34,.60)),
+    url("https://images.unsplash.com/photo-1509358271058-acd22cc93898?auto=format&fit=crop&w=1600&q=80")
+    center/cover no-repeat;
+}
+
+.hero-content{
+  max-width:850px;
+}
+
+.eyebrow{
+  color:#ffd77a;
+  font-weight:bold;
+  font-size:19px;
+  letter-spacing:1px;
+  margin-bottom:15px;
+}
+
+.hero h2{
+  font-size:clamp(36px,8vw,64px);
+  line-height:1.15;
+  margin-bottom:20px;
+}
+
+.hero p{
+  font-size:19px;
+  max-width:750px;
+  margin:0 auto 28px;
+}
+
+.btn{
+  display:inline-block;
+  background:var(--gold);
+  color:#17332a;
+  text-decoration:none;
+  padding:13px 25px;
+  border-radius:30px;
+  font-weight:bold;
+  margin:5px;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+section{
+  padding:70px 6%;
+  scroll-margin-top:90px;
+}
+
+.section-title{
+  text-align:center;
+  color:var(--green);
+  font-size:34px;
+  margin-bottom:15px;
+}
+
+.lead{
+  text-align:center;
+  max-width:800px;
+  margin:0 auto 35px;
+  color:#52635b;
+  font-size:18px;
+}
+
+.about-grid,
+.activity-grid,
+.gallery-grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  gap:22px;
+}
+
+.about-grid{
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+}
+
+.about-box{
+  background:white;
+  padding:28px;
+  border-radius:18px;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.about-box h3{
+  color:var(--green);
+  margin-bottom:10px;
+}
+
+.about-box p{
+  color:#52635b;
+}
+
+.activity-grid{
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+}
+
+.activity{
+  background:white;
+  padding:25px;
+  border-radius:18px;
+  text-align:center;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.activity .icon{
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+.activity h3{
+  color:var(--green);
+  margin-bottom:8px;
+}
+
+.gallery-grid{
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+}
+
+.gallery-card{
+  min-height:220px;
+  border-radius:18px;
+  overflow:hidden;
+  background:linear-gradient(135deg,#087443,#f4b942);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  text-align:center;
+  padding:20px;
+  font-size:20px;
+  font-weight:bold;
+}
+
+.contact{
+  background:#087443;
+  color:white;
+  text-align:center;
+}
+
+.contact .section-title{
+  color:white;
+}
+
+.contact p{
+  max-width:700px;
+  margin:10px auto;
+}
+
+.contact a{
+  color:#ffdc85;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+footer{
+  background:#064d32;
+  color:#dcece4;
+  text-align:center;
+  padding:25px 15px;
+  font-size:14px;
+}
+
+@media(max-width:650px){
+  header{
+    justify-content:center;
+    text-align:center;
+  }
+
+  nav{
+    justify-content:center;
+    gap:14px;
+  }
+
+  .brand{
+    justify-content:center;
+  }
+
+  .hero{
+    min-height:72vh;
+    padding:55px 20px;
+  }
+
+  .hero h2{
+    font-size:40px;
+  }
+
+  .hero p{
+    font-size:17px;
+  }
+
+  section{
+    padding:55px 20px;
+  }
+
+  .section-title{
+    font-size:30px;
+  }
+}
 </style>
 </head>
+
 <body>
+
 <header>
-  <div class="brand"><div class="logo">AS</div><div><h1>Assam Society of Kerala</h1><small>Unity • Support • Togetherness</small></div></div>
-  <nav><a href="#home">Home</a><a href="#about">About Us</a><a href="#activities">Activities</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></nav>
+
+<div class="brand">
+  <div class="logo">AS</div>
+
+  <div>
+    <h1>Assam Society of Kerala</h1>
+    <small>Unity • Support • Togetherness</small>
+  </div>
+</div>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About Us</a>
+  <a href="#activities">Activities</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+</nav>
+
 </header>
+
 <main>
+
 <section class="hero" id="home">
-  <div class="eyebrow">একতা • সহযোগিতা • ভাতৃত্ববোধ</div>
-  <h2>Assam Society of Kerala</h2>
-  <p>Bringing Assamese people in Kerala together through friendship, cultural connection, mutual support and community activities.</p>
-  <a class="btn" href="#about">Know About Us</a>
+
+<div class="hero-content">
+
+<div class="eyebrow">
+একা নহয় • সহযোগিতা • ভাতৃত্ববোধ
+</div>
+
+<h2>Assam Society of Kerala</h2>
+
+<p>
+Bringing Assamese people in Kerala together through friendship,
+cultural connection, mutual support and community activities.
+</p>
+
+<a class="btn" href="#about">Know About Us</a>
+<a class="btn" href="#contact">Contact Us</a>
+
+</div>
+
 </section>
-<section class="about" id="about">
-  <h2 class="section-title">About Our Society</h2>
-  <p class="lead">আমাৰ লক্ষ্য হৈছে কেৰালাত বসবাস কৰা অসমীয়া লোকসকলক একত্ৰিত কৰা আৰু পাৰস্পৰিক সহায়-সহযোগিতাৰ এক শক্তিশালী পৰিয়াল গঢ়ি তোলা।</p>
-  <div class="about-grid">
-    <div class="about-box"><h3>আমাৰ পৰিচয়</h3><p>Assam Society of Kerala হৈছে কেৰালাত থকা অসমীয়া সমাজৰ মাজত একতা, বন্ধুত্ব, সাংস্কৃতিক সম্পৰ্ক আৰু সহযোগিতা বৃদ্ধি কৰাৰ এক মঞ্চ।</p></div>
-    <div class="about-box"><h3>Our Mission</h3><p>To connect Assamese people across Kerala, encourage community participation, celebrate Assamese culture and help members find support when they need it.</p></div>
-  </div>
+
+<section id="about">
+
+<h2 class="section-title">
+About Our Society
+</h2>
+
+<p class="lead">
+কেৰালাত বসবাস কৰা অসমীয়া লোকসকলক একত্ৰিত কৰা আৰু
+পাৰস্পৰিক সহায়-সহযোগিতাৰ এক শক্তিশালী পৰিয়াল গঢ়ি তোলাই আমাৰ লক্ষ্য।
+</p>
+
+<div class="about-grid">
+
+<div class="about-box">
+<h3>আমাৰ পৰিচয়</h3>
+
+<p>
+Assam Society of Kerala হৈছে কেৰালাত থকা অসমীয়া সমাজৰ
+মাজত একতা, বন্ধুত্ব, সাংস্কৃতিক সম্পৰ্ক আৰু পাৰস্পৰিক
+সহায়-সহযোগিতা বৃদ্ধি কৰাৰ এক মঞ্চ।
+</p>
+</div>
+
+<div class="about-box">
+<h3>আমাৰ লক্ষ্য</h3>
+
+<p>
+কেৰালাত থকা অসমীয়া লোকসকলক একেলগে লৈ সাংস্কৃতিক অনুষ্ঠান,
+সামাজিক কাৰ্যসূচী আৰু প্ৰয়োজনৰ সময়ত পাৰস্পৰিক সহায় আগবঢ়োৱা।
+</p>
+</div>
+
+<div class="about-box">
+<h3>আমাৰ মূল্যবোধ</h3>
+
+<p>
+Unity • Respect • Friendship • Support • Togetherness
+</p>
+
+<p>
+সকলো সদস্যৰ প্ৰতি সন্মান আৰু সহযোগিতাৰ মনোভাৱেৰে
+এটা সুন্দৰ অসমীয়া সমাজ গঢ়ি তোলা।
+</p>
+</div>
+
+</div>
+
 </section>
+
 <section id="activities">
-  <h2 class="section-title">Our Activities</h2>
-  <p class="lead">আমাৰ সমাজৰ সৈতে জড়িত বিভিন্ন কাৰ্যসূচী আৰু সেৱা।</p>
-  <div class="cards">
-    <article class="card"><div class="emoji">🤝</div><h3>Community Support</h3><p>কেৰালাত থকা অসমীয়া লোকসকলৰ মাজত যোগাযোগ আৰু পাৰস্পৰিক সহায়ৰ ব্যৱস্থা।</p></article>
-    <article class="card"><div class="emoji">🎉</div><h3>Culture & Events</h3><p>বিহু, সাংস্কৃতিক অনুষ্ঠান, মিলনমেলা আৰু সামাজিক কাৰ্যসূচী।</p></article>
-    <article class="card"><div class="emoji">📢</div><h3>News & Updates</h3><p>সভা, অনুষ্ঠান, জাননী আৰু সমাজৰ গুৰুত্বপূৰ্ণ খবৰ।</p></article>
-  </div>
+
+<h2 class="section-title">
+Our Activities
+</h2>
+
+<p class="lead">
+অসমীয়া সমাজৰ একতা আৰু সাংস্কৃতিক পৰম্পৰা জীয়াই ৰখাৰ বাবে
+বিভিন্ন সামাজিক আৰু সাংস্কৃতিক কাৰ্যসূচী।
+</p>
+
+<div class="activity-grid">
+
+<div class="activity">
+<div class="icon">🤝</div>
+<h3>Community Support</h3>
+<p>
+প্ৰয়োজনৰ সময়ত সদস্যসকলৰ মাজত পাৰস্পৰিক সহায়-সহযোগিতা।
+</p>
+</div>
+
+<div class="activity">
+<div class="icon">🎭</div>
+<h3>Cultural Programs</h3>
+<p>
+বিহু, অসমীয়া সাংস্কৃতিক অনুষ্ঠান আৰু পৰম্পৰাগত কাৰ্যসূচী।
+</p>
+</div>
+
+<div class="activity">
+<div class="icon">❤️</div>
+<h3>Social Activities</h3>
+<p>
+সমাজৰ কল্যাণ আৰু সদস্যসকলৰ মাজত বন্ধুত্ব বৃদ্ধি কৰা কাৰ্যসূচী।
+</p>
+</div>
+
+<div class="activity">
+<div class="icon">🌏</div>
+<h3>Assamese Community</h3>
+<p>
+কেৰালাত থকা অসমীয়াসকলক একতাৰ বন্ধনত একেলগে ৰখা।
+</p>
+</div>
+
+</div>
+
 </section>
-<section class="about" id="gallery">
-  <h2 class="section-title">Photo Gallery</h2>
-  <p class="lead">আমাৰ অনুষ্ঠান আৰু সমাজৰ স্মৰণীয় মুহূৰ্তসমূহৰ ফটো ইয়াত যোগ কৰিব পাৰিব।</p>
-  <div class="gallery-grid"><div class="gallery-placeholder">Event Photo 1</div><div class="gallery-placeholder">Event Photo 2</div><div class="gallery-placeholder">Community Gathering</div></div>
+
+<section id="gallery">
+
+<h2 class="section-title">
+Gallery
+</h2>
+
+<p class="lead">
+আমাৰ সামাজিক, সাংস্কৃতিক আৰু community activities-ৰ স্মৃতি।
+</p>
+
+<div class="gallery-grid">
+
+<div class="gallery-card">
+অসমীয়া সাংস্কৃতিক অনুষ্ঠান
+</div>
+
+<div class="gallery-card">
+Community Gathering
+</div>
+
+<div class="gallery-card">
+বিহু উদযাপন
+</div>
+
+<div class="gallery-card">
+Unity & Togetherness
+</div>
+
+</div>
+
 </section>
-<section id="contact" class="contact">
-  <h2 class="section-title">Contact Us</h2>
-  <p>Assam Society of Kerala-ৰ সৈতে যোগাযোগ কৰিবলৈ তলৰ তথ্যসমূহ আপডেট কৰক।</p>
-  <p><strong>Phone / WhatsApp:</strong> [9633708576]<br><strong>Email:</strong> [assamsocietofkerala@gmail.come<br><strong>Location:</strong> Kerala, India</p>
-  <a class="btn" href="https://wa.me/9633708576" target="_blank" rel="noopener">WhatsApp Us</a>
+
+<section class="contact" id="contact">
+
+<h2 class="section-title">
+Contact Us
+</h2>
+
+<p>
+Assam Society of Kerala-ৰ সৈতে যোগাযোগ কৰিবলৈ
+আমাৰ community-ৰ সৈতে সংযোগ কৰক।
+</p>
+
+<p>
+<strong>Assam Society of Kerala</strong>
+</p>
+
+<p>
+Unity • Support • Togetherness
+</p>
+
+<a class="btn" href="mailto:assamsocietykerala@gmail.com">
+Email Us
+</a>
+
 </section>
+
 </main>
-<footer>© <span id="year"></span> Assam Society of Kerala. All rights reserved.<br>Made for community, unity and support.</footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+
+<footer>
+
+© 2026 Assam Society of Kerala<br>
+Unity • Support • Togetherness
+
+</footer>
+
 </body>
 </html>
